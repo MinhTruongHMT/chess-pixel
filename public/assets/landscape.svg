@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMax slice" shape-rendering="crispEdges">
+<defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#79cefa"/><stop offset="1" stop-color="#d5f5e8"/></linearGradient></defs>
+<path fill="url(#sky)" d="M0 0h1600v1000H0z"/>
+<path fill="#ffe6a0" d="M1190 95h72v16h16v72h-16v16h-72v-16h-16v-72h16z"/>
+<path fill="#fff8d6" d="M1206 110h40v11h13v40h-13v13h-40v-13h-13v-40h13z"/>
+<g fill="#fff9e9" opacity=".8"><path d="M53 142h42v-20h55v12h38v25h33v27H23v-25h30zM421 57h40V38h62v19h28v19h31v28H391V76h30zM913 199h51v-20h40v10h42v21h43v27H880v-25h33zM1356 269h27v-25h75v14h35v25h32v24h-198v-24h29z"/></g>
+<g fill="#b1e1e0"><path d="M0 543h72v-42h59v-34h69v-33h53v-48h70v-36h63v57h64v54h78v46h71v56h84v-26h87v-41h74v-44h91v-52h45v37h55v47h66v39h90v33h90v-19h58v-46h64v-61h77v-39h62v-60h43v79h65v44h56v44h73v57h68v79H0z"/></g>
+<g fill="#8bc9bc"><path d="M0 606h54v-46h56v-27h75v-31h68v-29h62v49h67v43h58v43h51v46h110v-28h106v-45h60v-42h77v-30h82v-29h49v47h90v36h70v38h100v48h101v-50h44v-29h80v-37h74v-64h53v33h59v60h55v24h80v34h71v73H0z"/></g>
+<!-- Castle on the eastern hill -->
+<path fill="#7ab875" d="M1137 646h70v-30h55v-26h74v-15h95v29h57v20h59v23h66v47h87v78h-563z"/>
+<path fill="#baaa8d" d="M1273 551h125v55h-125zM1253 477h44v98h-44zM1380 467h44v108h-44zM1307 456h58v124h-58z"/>
+<path fill="#fff1c9" d="M1259 477h30v88h-30zM1386 467h30v98h-30zM1314 456h44v120h-44zM1289 535h103v58h-103z"/>
+<path fill="#b994c6" d="M1246 477v-14h7v-14h8v-15h7v-14h9v14h8v15h8v14h7v14zM1373 467v-14h8v-14h8v-15h8v-14h10v14h7v15h8v14h8v14zM1299 456v-16h9v-15h9v-16h10v-17h15v17h10v16h9v15h10v16z"/>
+<path fill="#9272ac" d="M1268 420h9v57h-9zM1397 410h10v57h-10zM1327 392h15v64h-15z" opacity=".3"/>
+<path fill="#9ecbe0" d="M1268 493h12v17h-12zM1395 485h12v17h-12zM1326 475h18v26h-18zM1311 550h12v16h-12zM1358 550h12v16h-12z"/>
+<path fill="#886448" d="M1330 567h23v30h-23z"/><path fill="#e9c786" d="M1335 573h13v24h-13z"/>
+<path fill="#775951" d="M1334 359h3v36h-3zM1272 390h3v32h-3z"/><path fill="#ff8996" d="M1337 359h27v15h-27zM1275 390h20v12h-20z"/>
+<!-- Far meadow -->
+<path fill="#89d77a" d="M0 687h103v-28h107v-25h127v-20h172v18h84v27h134v32h92v-16h133v-25h79v-21h128v32h106v26h131v-12h132v-27h122v41h50v311H0z"/>
+<path fill="#70c666" d="M0 731h126v-13h154v16h85v-14h197v26h201v-13h212v-22h162v24h130v22h161v-16h172v259H0z"/>
+<!-- Winding path -->
+<path fill="#f3db9c" d="M1330 597h26v38h-29v35h-45v28h-74v27h-108v39H969v47H789v74H590v115H397V888h228v-74h189v-45h194v-37h133v-33h85v-26h57v-32h47z"/>
+<path fill="#efd094" d="M397 955h193v45H397zM625 848h164v40H625zM814 795h155v19H814zM1008 751h92v18h-92z"/>
+<!-- Pixel trees -->
+<g><path fill="#9b7447" d="M91 659h24v134H91zM1500 639h25v139h-25zM204 736h18v101h-18zM1413 773h21v111h-21z"/>
+<path fill="#4c9d63" d="M42 620h19v-34h22v-24h40v24h26v34h19v66h-19v24H61v-24H42zM1454 597h21v-30h21v-26h38v26h26v30h22v65h-22v24h-85v-24h-21zM169 717h19v-24h19v-20h25v20h23v24h15v47h-15v20h-67v-20h-19zM1380 748h15v-25h17v-18h30v18h19v25h19v59h-19v18h-66v-18h-15z"/>
+<path fill="#7ed957" d="M42 620h19v-34h22v-24h40v24h26v34h-23v27H96v24H42zM1454 597h21v-30h21v-26h38v26h26v30h-20v29h-39v25h-47zM169 717h19v-24h19v-20h25v20h23v24h-24v28h-62zM1380 748h15v-25h17v-18h30v18h19v25h-22v33h-59z"/>
+<path fill="#a1e57d" d="M75 602h19v-18h23v18h16v17H75zM1488 581h16v-19h23v19h17v17h-56zM195 704h23v16h-23zM1402 736h24v18h-24z"/></g>
+<!-- Foreground grass, flowers, stones -->
+<path fill="#61b85f" d="M0 867h97v-12h113v16h139v-11h57v140H0zM1044 903h175v-17h138v13h126v-15h117v116h-556z"/>
+<g fill="#40985b"><path d="M37 848h5v11h7v-18h5v18h7v-9h5v15H37zM327 779h5v11h7v-18h5v18h7v-9h5v15h-29zM1289 855h5v11h7v-18h5v18h7v-9h5v15h-29zM901 906h5v11h7v-18h5v18h7v-9h5v15h-29zM1567 899h5v11h7v-18h5v18h7v-9h5v15h-29z"/></g>
+<g fill="#ffd966"><path d="M153 894h7v-7h7v7h7v7h-7v7h-7v-7h-7zM1190 806h6v-6h6v6h6v6h-6v6h-6v-6h-6zM75 942h6v-6h6v6h6v6h-6v6h-6v-6h-6z"/></g>
+<g fill="#ff929c"><path d="M291 900h7v-7h7v7h7v7h-7v7h-7v-7h-7zM1476 924h7v-7h7v7h7v7h-7v7h-7v-7h-7zM1091 943h6v-6h6v6h6v6h-6v6h-6v-6h-6z"/></g>
+<g fill="#b99aff"><path d="M229 939h7v-7h7v7h7v7h-7v7h-7v-7h-7zM1333 928h6v-6h6v6h6v6h-6v6h-6v-6h-6z"/></g>
+<g fill="#d2d4b6"><path d="M362 954h22v-8h18v8h13v15h-53zM1228 940h18v-7h18v7h11v15h-47zM104 803h13v-6h17v6h9v10h-39z"/></g>
+</svg>

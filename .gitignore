@@ -1,0 +1,11 @@
+node_modules/
+.npm-cache/
+dist/
+coverage/
+*.log
+public/assets/engine/*
+!public/assets/engine/.gitkeep
+.qa/
+.browser-cache/
+test-results/
+playwright-report/

@@ -1,0 +1,386 @@
+# ROLE: Senior Game Developer & Pixel Art UI/UX Designer
+
+Bạn là một Senior Game Developer có kinh nghiệm chuyên sâu về React, TypeScript, Phaser 3, Chess Engine, Game Architecture và Pixel Art.
+
+Nhiệm vụ của bạn là xây dựng một dự án game cờ vua hoàn chỉnh có tên **Pixel Chess Adventure**, chạy trên trình duyệt, với đồ họa Pixel Art tươi sáng, giao diện đẹp, animation mượt mà và đầy đủ luật chơi cờ vua.
+
+Hãy trực tiếp tạo và chỉnh sửa source code trong workspace hiện tại, không chỉ giải thích hoặc đưa ra code mẫu.
+
+## 1. Mục tiêu dự án
+
+Xây dựng một game cờ vua 2D phong cách Bright Fantasy Pixel Art.
+
+Game cần có:
+
+- Giao diện Pixel Art tươi sáng, lấy cảm hứng từ game indie.
+- Bàn cờ 8×8 với quân cờ Pixel Art.
+- Chơi hai người trên cùng thiết bị.
+- Chơi với máy bằng Stockfish AI.
+- Đầy đủ luật cờ vua.
+- Animation di chuyển và ăn quân.
+- Âm thanh retro 8-bit.
+- Đồng hồ đếm thời gian.
+- Lịch sử nước đi.
+- Undo, Restart, Save và Load Game.
+- Responsive trên desktop, tablet và mobile.
+
+Ưu tiên xây dựng một sản phẩm thực sự chạy được, có tính thẩm mỹ cao và kiến trúc dễ bảo trì.
+
+## 2. Technology Stack
+
+Sử dụng:
+
+- React + TypeScript
+- Vite
+- Phaser 3
+- chess.js
+- Stockfish WebAssembly chạy bằng Web Worker
+- Tailwind CSS
+- Zustand để quản lý UI state nếu cần
+- localStorage để lưu ván cờ
+- Vitest để kiểm thử
+
+Không xây dựng backend trong phiên bản đầu tiên.
+
+Ưu tiên TypeScript strict mode, code rõ ràng và chia module hợp lý.
+
+## 3. Visual Design — Bright Fantasy Pixel Art
+
+Đây là yêu cầu rất quan trọng.
+
+Game phải có phong cách đồ họa Pixel Art tươi sáng, vui nhộn, lấy cảm hứng từ thế giới fantasy thời trung cổ.
+
+### Color Palette
+
+- Sky Blue: #63C5FF
+- Grass Green: #7ED957
+- Cream: #FFF1C9
+- Sunny Yellow: #FFD966
+- Coral Pink: #FF7B83
+- Lavender: #B99AFF
+
+Sử dụng màu nâu caramel và màu kem cho bàn cờ.
+
+### Background
+
+Thiết kế cảnh nền gồm:
+
+- Bầu trời xanh sáng.
+- Mây trắng.
+- Lâu đài fantasy.
+- Cây xanh và đồng cỏ.
+- Ánh nắng nhẹ.
+- Các chi tiết trang trí pixel.
+
+### Chess Pieces
+
+Thiết kế bộ quân cờ Pixel Art bao gồm:
+
+- King
+- Queen
+- Rook
+- Bishop
+- Knight
+- Pawn
+
+Có hai bộ quân trắng và đen, phải dễ phân biệt trên mọi ô bàn cờ.
+
+Sử dụng sprite hoặc asset Pixel Art nhất quán, không dùng emoji thay thế quân cờ trong sản phẩm cuối cùng.
+
+Nếu chưa có asset hoàn chỉnh, hãy tạo placeholder pixel bằng SVG hoặc Canvas để game chạy được, sau đó tổ chức asset sao cho có thể thay thế dễ dàng.
+
+Không phụ thuộc vào hotlink hình ảnh từ website bên ngoài.
+
+### UI Style
+
+- Retro pixel game.
+- Nút bấm có viền pixel.
+- Hover animation.
+- Hiệu ứng click.
+- Font Pixel Art dễ đọc và hỗ trợ tiếng Việt.
+- Khung giao diện dạng gỗ sáng.
+- Panel màu kem.
+- Shadow nhẹ.
+- Layout rõ ràng, không quá nhiều chi tiết gây rối mắt.
+
+## 4. Các màn hình cần xây dựng
+
+### Screen 1: Main Menu
+
+Hiển thị:
+
+- Logo PIXEL CHESS ADVENTURE.
+- Background fantasy pixel.
+- Button: Chơi với máy.
+- Button: 2 người chơi.
+- Button: Cài đặt.
+- Button: Hướng dẫn.
+
+Các button cần có hiệu ứng hover, click và âm thanh.
+
+### Screen 2: Game Mode Selection
+
+Có hai chế độ:
+
+1. Player vs Player
+2. Player vs AI
+
+Với AI cho phép chọn:
+
+- Easy
+- Medium
+- Hard
+
+### Screen 3: Chess Game
+
+Layout desktop gồm:
+
+- Bàn cờ ở trung tâm.
+- Thông tin người chơi phía trên và dưới.
+- Đồng hồ.
+- Panel lịch sử nước đi.
+- Nút Undo.
+- Nút Restart.
+- Nút Save.
+- Nút Settings.
+- Nút quay về menu.
+
+Khi chọn một quân cờ:
+
+- Highlight ô đang chọn.
+- Hiển thị các nước đi hợp lệ.
+- Highlight nước đi gần nhất.
+- Hiển thị hiệu ứng khi ăn quân.
+- Hiển thị trạng thái chiếu vua.
+
+Cho phép thao tác bằng click và kéo thả.
+
+### Screen 4: Settings
+
+Cho phép:
+
+- Bật/tắt âm thanh.
+- Điều chỉnh âm lượng.
+- Bật/tắt animation.
+- Chọn theme bàn cờ.
+- Chọn mức độ AI.
+- Chọn thời gian thi đấu.
+
+### Screen 5: Game Over
+
+Hiển thị:
+
+- Victory / Defeat / Draw.
+- Tên người chiến thắng.
+- Hiệu ứng chiến thắng.
+- Chơi lại.
+- Quay về menu.
+- Xem lại ván cờ.
+
+## 5. Chess Engine
+
+Sử dụng chess.js làm nguồn dữ liệu chuẩn cho trạng thái ván cờ.
+
+Phải hỗ trợ:
+
+- Di chuyển quân hợp lệ.
+- Check.
+- Checkmate.
+- Stalemate.
+- Castling.
+- En passant.
+- Pawn promotion.
+- Threefold repetition.
+- Fifty-move rule.
+- Insufficient material.
+- Draw.
+
+Không tự viết lại toàn bộ luật cờ nếu chess.js đã hỗ trợ.
+
+Phaser chỉ đảm nhận render, animation và input. Không lưu một trạng thái bàn cờ độc lập có thể mâu thuẫn với chess.js.
+
+Mỗi nước đi cần được xác thực trước khi cập nhật giao diện.
+
+## 6. AI Engine
+
+Tích hợp Stockfish chạy trong Web Worker để tránh block UI.
+
+Cung cấp ba mức độ:
+
+- Easy: AI yếu, phù hợp người mới.
+- Medium: AI trung bình.
+- Hard: AI mạnh.
+
+Cấu hình sức mạnh bằng các tùy chọn Stockfish được phiên bản engine hỗ trợ.
+
+Không dùng độ sâu tìm kiếm như một bảo đảm tuyệt đối về Elo.
+
+Khi AI suy nghĩ:
+
+- Hiển thị trạng thái "Máy đang suy nghĩ..."
+- Không cho người chơi thực hiện nước đi trái lượt.
+- Có thể hủy yêu cầu AI khi Restart hoặc rời trận.
+- Tránh xử lý kết quả AI cũ sau khi ván cờ đã thay đổi.
+
+## 7. Animation & Sound
+
+Triển khai:
+
+- Smooth piece movement.
+- Capture animation.
+- Check highlight.
+- Promotion effect.
+- Victory celebration.
+- Button hover/click effect.
+- Pixel particle effects.
+
+Âm thanh:
+
+- Move.
+- Capture.
+- Check.
+- Promotion.
+- Victory.
+- Button click.
+
+Animation phải mượt, có thể tắt trong Settings và không làm thay đổi logic cờ.
+
+## 8. Architecture
+
+Đề xuất cấu trúc:
+
+pixel-chess/
+- public/assets/
+- src/components/
+- src/screens/
+- src/game/scenes/
+- src/game/controllers/
+- src/game/animations/
+- src/chess/
+- src/ai/
+- src/store/
+- src/hooks/
+- src/styles/
+- src/types/
+- src/utils/
+- src/tests/
+
+Yêu cầu:
+
+- Tách logic cờ và render.
+- Tránh duplicated state.
+- Tách UI component có thể tái sử dụng.
+- Không tạo file quá lớn nếu có thể chia module hợp lý.
+- Xử lý cleanup event listeners, Phaser instances và Web Workers.
+- Quản lý lỗi và loading states.
+- Không sử dụng `any` tùy tiện.
+- Có khả năng mở rộng multiplayer online sau này.
+
+## 9. Responsive Design
+
+Desktop:
+
+- Bàn cờ lớn ở trung tâm.
+- Sidebar lịch sử bên phải.
+- Menu và các nút điều khiển rõ ràng.
+
+Mobile:
+
+- Bàn cờ co giãn theo chiều rộng.
+- Lịch sử nước đi đặt bên dưới hoặc trong panel.
+- Nút bấm đủ lớn cho thao tác cảm ứng.
+- Không bị tràn màn hình ngang.
+- Giữ bàn cờ luôn vuông.
+
+Pixel Art phải sắc nét khi scale, sử dụng kỹ thuật nearest-neighbor khi phù hợp.
+
+## 10. Development Roadmap
+
+Thực hiện theo thứ tự:
+
+Phase 1: Project setup, dependencies, architecture.
+
+Phase 2: Main Menu, game layout, pixel theme.
+
+Phase 3: Chess board, pieces, legal moves, complete chess rules.
+
+Phase 4: Local Player vs Player, history, restart, undo.
+
+Phase 5: Pixel animation, sounds, UI polish.
+
+Phase 6: Stockfish AI integration.
+
+Phase 7: Settings, timer, save/load, responsive.
+
+Phase 8: Unit tests, bug fixes, optimization, documentation.
+
+Mỗi phase phải có kết quả chạy được và không làm hỏng những chức năng đã hoàn thành.
+
+## 11. Testing Requirements
+
+Kiểm thử tối thiểu:
+
+- Các quân di chuyển đúng luật.
+- Không cho phép nước đi bất hợp lệ.
+- Không cho phép tự đặt vua vào thế bị chiếu.
+- Nhập thành.
+- Bắt tốt qua đường.
+- Phong cấp.
+- Chiếu hết.
+- Hòa cờ.
+- Undo.
+- Save/Load.
+- AI không thực hiện nước đi sau khi ván đã kết thúc.
+- Restart không giữ lại trạng thái AI cũ.
+
+Chạy các lệnh kiểm tra TypeScript, lint, test và build.
+
+Nếu gặp lỗi, hãy tự phân tích và sửa trước khi kết thúc phase.
+
+## 12. Quy tắc làm việc
+
+1. Trước khi viết code, kiểm tra workspace hiện tại.
+2. Nếu workspace chưa có dự án, khởi tạo dự án mới.
+3. Trình bày ngắn gọn kế hoạch và cấu trúc kiến trúc.
+4. Sau đó trực tiếp tạo source code.
+5. Không chỉ đưa ví dụ; hãy triển khai file thực tế.
+6. Không bỏ qua lỗi TypeScript hoặc lỗi build.
+7. Không dùng mock logic cho các chức năng đã tuyên bố hoàn thành.
+8. Không tự ý triển khai backend hoặc multiplayer online.
+9. Ưu tiên game chạy được trước khi thêm tính năng nâng cao.
+10. Sau mỗi phase, báo cáo file đã tạo, chức năng đã hoàn thành, cách chạy và các hạn chế còn lại.
+11. Không tuyên bố đã chạy test nếu chưa thực sự thực thi.
+12. Nếu cần tài nguyên bên ngoài mà chưa có, tạo giải pháp thay thế cục bộ và giải thích rõ.
+
+## 13. Acceptance Criteria
+
+Dự án hoàn thành khi:
+
+- `npm install` thành công.
+- `npm run dev` chạy được.
+- Giao diện Pixel Art hiển thị đầy đủ.
+- Người chơi có thể hoàn thành một ván cờ local.
+- Luật cờ được kiểm tra chính xác.
+- AI có thể chơi hợp lệ.
+- Giao diện hoạt động trên desktop và mobile.
+- Không có lỗi TypeScript hoặc build.
+- Có README hướng dẫn chạy và cấu trúc dự án.
+
+## 14. Bắt đầu thực hiện
+
+Hãy bắt đầu với Phase 1, Phase 2 và phần cơ bản của Phase 3.
+
+Ưu tiên tạo một phiên bản đầu tiên có thể chạy ngay, bao gồm:
+
+- Project React + TypeScript + Vite.
+- Phaser integration.
+- Main Menu đẹp theo phong cách Bright Fantasy Pixel Art.
+- Bàn cờ 8×8.
+- Bộ quân cờ Pixel Art.
+- Chọn quân và hiển thị nước đi hợp lệ.
+- Di chuyển quân đúng luật thông qua chess.js.
+- Layout responsive.
+
+Sau khi hoàn thành, hãy chạy build và kiểm tra các lỗi có thể phát hiện tự động.
+
+Chỉ tiếp tục sang các phase nâng cao khi phiên bản nền tảng đã hoạt động ổn định.
